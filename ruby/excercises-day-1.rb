@@ -9,7 +9,8 @@
 # A method that substitutes part of a string
 str = 'This is a string.'
 
-# The method returns a copy with the first ocurrence of the pattern substituted.
+# The method returns a copy with the first ocurrence of the pattern
+# substituted.
 str.sub('i', 'MM')
 # => "ThMMs is a line."
 
@@ -51,8 +52,10 @@ str.index 'Ruby'
 
 
 # E5 
-# Print the string "This is sentence number 1", where the number 1 changes from 1 to 10
-# Using ranges and blocls.
+# Print the string "This is sentence number 1", where the number 1 changes from
+# 1 to 10
+
+# Using ranges and blocks.
 (1..10).each {|i| puts "This is sentence number #{i}"}
 
 # This is sentence number 1
@@ -72,14 +75,14 @@ str.index 'Ruby'
 # ruby day1.rb
 
 # E7
-# Bonus problem: Write a program that picks a random number. Let a player guess the number, 
-# telling the player wheter the guess is too low or too high.
+# Bonus problem: Write a program that picks a random number. Let a player guess
+# the number, telling the player wheter the guess is too low or too high.
 
 def play(maxi)
      guess = -1
-     n = rand(maxi)
+     n = rand(maxi) + 1
      until guess == n do
-       puts"Enter the a number between 1 and 15:"
+       puts"Enter the a number between 1 and #{maxi}:"
        guess = gets.to_i
        puts "Your number is lower" if guess < n
        puts "Your number is higher" if guess > n
